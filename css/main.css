@@ -1,0 +1,154 @@
+body { 
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    gap: 20px;
+ }
+
+ .scene {
+  width: 200px;
+  height: 260px;
+  border: 1px solid #CCC;
+  margin: 40px 0;
+  perspective: 600px;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  position: relative;
+}
+
+.card.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.card__face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  line-height: 260px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 40px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.card__face--front {
+  background: red;
+}
+
+.card__face--back {
+  position: absolute;
+  color: red;
+  transform: rotateY(180deg);
+}
+.img-front {
+    width: 300px;
+    height: 300px;
+}
+
+ .heart {
+    position: relative;
+    width: 25px;
+    height: 46px;
+    background-color: red;
+    box-shadow: -1px 0px 2px #444;  
+    -webkit-border-radius: 50px 50px 0 0;
+    -moz-border-radius: 50px 50px 0 0;
+    border-radius: 50px 50px 0 0;
+
+    -webkit-transform: rotate(315deg);
+    -moz-transform: rotate(315deg);
+    -ms-transform: rotate(315deg);
+    -o-transform: rotate(315deg);
+    transform: rotate(315deg); 
+  }
+ 
+  .heart:before {
+    position: absolute;
+    width: 46px;
+    height: 25px;
+    left: 0;
+    bottom: 0;
+    content: "";
+    background-color: red;
+    box-shadow: 0px 3px 3px #444444; 
+    -webkit-border-radius: 50px 50px 0 0;
+    -moz-border-radius: 50px 50px 0 0;
+    border-radius: 0 50px 50px 0;
+  }
+  
+  .heart:hover:before, .heart:hover{
+      box-shadow:none;
+  }
+  .top {
+      position: relative;
+      margin: auto;
+      bottom: 0;
+      left: 100px;
+  }
+  .bottom {
+      position: relative;
+      margin: auto;
+      top: 340px;
+      right: 120px;
+  } 
+ 
+
+  .wrapper {
+    /* position: absolute; */
+    width: 300px;
+    height: 444px;
+    /* left: 0;
+    top: 0; */
+    /* background-color: #d5d5d5; */
+  }
+  .card {
+    width: 300px;
+    height: 444px;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    /* perspective: 1000px; */
+    /* border: 1px solid #fff; */
+  }
+  .front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    transition: 1s;
+    backface-visibility: hidden;
+    background-color: #fff;
+   }
+  .front img {
+    max-width: 100%;
+    min-width: 100%;
+    height: auto;
+  }
+  .back {
+    transform: rotateY(180deg);
+  }
+  .card:hover .front {
+    transform: rotateY(180deg);}
+  .card:hover .back {
+    transform: rotateY(360deg);}
+
+.diamond {
+    width: 40px;
+    height: 40px;
+    background: orange;
+    transform: rotate(-45deg);
+}
+.foto-card {
+    width: 300px;
+    height: 444px;
+}
